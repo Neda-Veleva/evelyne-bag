@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-serif:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  /* Витрина — editorial (Noto Serif + Manrope, виж DESIGN.md) */
+  --font-noto: 'Noto Serif', Georgia, 'Times New Roman', ui-serif, serif;
+  --font-manrope: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility font-noto {
+  font-family: var(--font-noto);
+}
+
+@utility font-manrope {
+  font-family: var(--font-manrope);
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100svh;
+}
