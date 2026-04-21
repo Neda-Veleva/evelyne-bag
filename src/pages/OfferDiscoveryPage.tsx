@@ -353,18 +353,22 @@ export default function OfferDiscoveryPage() {
               Оферта за уебсайт и административна система за Evelyne Bags
             </h1>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to={DEMO_SITE}
+              <a
+                href={DEMO_SITE}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl border border-white/45 bg-white/15 px-5 py-2.5 font-manrope text-sm font-semibold text-white shadow-sm backdrop-blur-sm transition hover:bg-white/25"
               >
                 Демо на сайта
-              </Link>
-              <Link
-                to="/admin"
+              </a>
+              <a
+                href="/admin"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl border border-white/45 bg-white/15 px-5 py-2.5 font-manrope text-sm font-semibold text-white shadow-sm backdrop-blur-sm transition hover:bg-white/25"
               >
                 Демо на администрацията
-              </Link>
+              </a>
             </div>
           </div>
         </section>
