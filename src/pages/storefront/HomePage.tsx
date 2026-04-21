@@ -220,11 +220,6 @@ export default function HomePage() {
               alt=""
               className="h-full w-full object-cover transition-transform duration-[3s] group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-[#1b1c19]/0 opacity-0 transition-opacity group-hover:bg-[#1b1c19]/10 group-hover:opacity-100">
-              <span className="font-manrope text-xs uppercase tracking-widest text-[#faf9f4]">
-                The Editorial Issue
-              </span>
-            </div>
           </div>
           <div className="group relative min-h-[200px] overflow-hidden md:col-span-2 md:min-h-0">
             <img
