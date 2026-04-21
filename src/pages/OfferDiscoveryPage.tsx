@@ -4,6 +4,7 @@ import {
   Award,
   BookOpen,
   Calendar,
+  Gem,
   CheckCircle,
   CheckCircle2,
   Clock,
@@ -12,12 +13,11 @@ import {
   LayoutDashboard,
   Mail,
   RefreshCw,
-  Slash,
   SlidersHorizontal,
-  Sparkles,
   Star,
   Tag,
   TrendingUp,
+  Wallet,
   Wand,
   Workflow,
 } from 'lucide-react'
@@ -35,7 +35,7 @@ type OfferCard = {
 
 const featureCards: OfferCard[] = [
   {
-    icon: <Sparkles className="h-6 w-6" />,
+    icon: <Gem className="h-6 w-6" />,
     title: 'Концепция и подход',
     color: 'from-slate-700 to-slate-900',
     subtitle: 'Този проект не е стандартен онлайн магазин.',
@@ -288,7 +288,7 @@ const commercialCards: OfferCard[] = [
     goal: 'устойчиво развитие във времето.',
   },
   {
-    icon: <Slash className="h-6 w-6" />,
+    icon: <Wallet className="h-6 w-6" />,
     title: 'Извън обхвата',
     color: 'from-slate-500 to-slate-700',
     items: ['Допълнителни функционалности извън описаното', 'Външни услуги при необходимост'],
