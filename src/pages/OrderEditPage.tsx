@@ -126,6 +126,9 @@ function OrderPreview({
               <div className="min-w-0 flex-1">
                 <p className="font-medium text-[#1a1523]">{product.name || 'Без заглавие'}</p>
                 <p className="mt-1 text-sm text-[#5c5348]">{formatMoneyEUR(product.price)}</p>
+                {product.deposit > 0 ? (
+                  <p className="mt-1 text-sm text-[#5c5348]">Депозит: {formatMoneyEUR(product.deposit)}</p>
+                ) : null}
                 {product.colors.length > 0 ? (
                   <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
                     <span className="text-[#6b6575]">Цвят:</span>

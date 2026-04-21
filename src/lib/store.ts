@@ -7,8 +7,11 @@ const STORAGE_KEY = 'eveline-bags-admin-data-v5'
 function normalizeProduct(p: Product & { creationStory?: string; relatedProductIds?: string[] }): Product {
   const rawRelated = Array.isArray(p.relatedProductIds) ? p.relatedProductIds : []
   const relatedProductIds = [...new Set(rawRelated.filter(Boolean))].slice(0, 4)
+  const rawDeposit = (p as { deposit?: unknown }).deposit
+  const deposit = typeof rawDeposit === 'number' && !Number.isNaN(rawDeposit) ? rawDeposit : 0
   return {
     ...p,
+    deposit,
     colors: Array.isArray(p.colors) ? p.colors : [],
     creationStory: typeof p.creationStory === 'string' ? p.creationStory : '',
     relatedProductIds,
@@ -28,6 +31,7 @@ function mergeProductWithDemoSeed(p: Product): Product {
   if (!seed) return normalizeProduct(p)
   return normalizeProduct({
     ...p,
+    deposit: p.deposit > 0 ? p.deposit : seed.deposit,
     creationStory: p.creationStory?.trim() ? p.creationStory : seed.creationStory,
     relatedProductIds: p.relatedProductIds?.length ? p.relatedProductIds : [...seed.relatedProductIds],
     story: p.story?.trim() ? p.story : seed.story,
@@ -82,6 +86,7 @@ export function createEmptyProduct(): Product {
     name: '',
     shortDescription: '',
     price: 0,
+    deposit: 0,
     status: 'available',
     productType: 'one_of_a_kind',
     mainImage: '',

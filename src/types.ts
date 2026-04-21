@@ -20,6 +20,8 @@ export type Product = {
   name: string
   shortDescription: string
   price: number
+  /** Депозит при поръчка (EUR). */
+  deposit: number
   status: ProductStatus
   productType: ProductKind
   /** Налични цветове; празен масив = без отделни варианти. */

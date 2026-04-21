@@ -58,6 +58,7 @@ export default function ProductsListPage() {
                 <th className="px-4 py-3 font-medium">Име</th>
                 <th className="px-4 py-3 font-medium">Тип</th>
                 <th className="px-4 py-3 font-medium">Цена</th>
+                <th className="px-4 py-3 font-medium">Депозит</th>
                 <th className="px-4 py-3 font-medium">Статус</th>
                 <th className="px-4 py-3 font-medium">Видимост</th>
                 <th className="px-4 py-3 font-medium text-right">Превю</th>
@@ -86,6 +87,9 @@ export default function ProductsListPage() {
                   <td className="px-4 py-3 text-[#5c5348]">{typeLabel[p.productType]}</td>
                   <td className="px-4 py-3 font-medium tabular-nums text-[#1a1523]">
                     {formatMoneyEUR(p.price)}
+                  </td>
+                  <td className="px-4 py-3 tabular-nums text-[#5c5348]">
+                    {p.deposit > 0 ? formatMoneyEUR(p.deposit) : '—'}
                   </td>
                   <td className="px-4 py-3 text-[#5c5348]">{statusLabel[p.status]}</td>
                   <td className="px-4 py-3">{visibilityBadge(p.visibility)}</td>

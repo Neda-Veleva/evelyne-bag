@@ -162,6 +162,11 @@ export default function ProductDetailPage() {
               <p className="font-manrope text-xs uppercase tracking-[0.35em] text-[#735c00]">Evelyne Atelier</p>
               <h1 className="mt-3 font-noto text-4xl leading-tight md:text-5xl">{product.name}</h1>
               <p className="mt-6 font-manrope text-2xl font-light text-[#1b1c19]">{formatMoneyEUR(product.price)}</p>
+              {product.deposit > 0 ? (
+                <p className="mt-2 font-manrope text-sm text-[#4d4635]">
+                  Депозит при поръчка: {formatMoneyEUR(product.deposit)}
+                </p>
+              ) : null}
               <p className="mt-2 font-manrope text-sm text-[#4d4635]">{statusLabel[product.status]}</p>
 
               <div className="my-10 h-px w-full bg-[#d0c5af]/25" />

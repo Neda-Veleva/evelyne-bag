@@ -183,6 +183,16 @@ export default function ProductEditPage() {
                 className="w-full max-w-xs rounded-xl border border-[#e0d9cc] px-3 py-2.5 text-sm tabular-nums outline-none focus:ring-2 focus:ring-[#c5a28c]/50"
               />
             </AdminField>
+            <AdminField label="Депозит (EUR)" hint="Сума при потвърждаване на поръчка; 0 ако няма отделен депозит.">
+              <input
+                type="number"
+                min={0}
+                step={1}
+                value={form.deposit || ''}
+                onChange={(e) => patch('deposit', Number(e.target.value))}
+                className="w-full max-w-xs rounded-xl border border-[#e0d9cc] px-3 py-2.5 text-sm tabular-nums outline-none focus:ring-2 focus:ring-[#c5a28c]/50"
+              />
+            </AdminField>
             <AdminField label="Статус на наличност">
               <select
                 value={form.status}

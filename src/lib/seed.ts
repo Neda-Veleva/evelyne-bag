@@ -45,6 +45,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Кожа с топъл оттенък и шепот от златиста закопчалка — единствена вечерна бройка, която няма да се повтори.',
       price: 1280,
+      deposit: 320,
       status: 'available',
       productType: 'one_of_a_kind',
       mainImage: P.clutchMain,
@@ -80,6 +81,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Като порцелан — тиха кожа и сатенена вътрешност: сдържана светлина за дневни поводи.',
       price: 980,
+      deposit: 250,
       status: 'sold_out',
       productType: 'limited_edition',
       mainImage: P.ameliaMain,
@@ -115,6 +117,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Дълбоки минерални тонове и скулптурна закопчалка — по вашите мерки, когато дойде вдъхновението.',
       price: 1450,
+      deposit: 450,
       status: 'made_to_order',
       productType: 'custom',
       mainImage: P.santoriniMain,
@@ -149,6 +152,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Розов оттенък на коприна върху стегната кожа — романтика без шум.',
       price: 1120,
+      deposit: 280,
       status: 'available',
       productType: 'limited_edition',
       mainImage: P.ameliaWoodMain,
@@ -183,6 +187,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Архитектурни извивки в почти черна кожа — колекционерски силует с присъствие като в галерия.',
       price: 1380,
+      deposit: 350,
       status: 'available',
       productType: 'one_of_a_kind',
       mainImage: P.maxiMain,
@@ -218,6 +223,7 @@ export const DEMO_DATA: AppData = {
       shortDescription:
         'Сиво като морска мъгла с ръчно подредени вълни — меко изявление за бавни пътувания.',
       price: 1050,
+      deposit: 260,
       status: 'available',
       productType: 'limited_edition',
       mainImage: P.capriMain,
